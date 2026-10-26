@@ -1,0 +1,112 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container py-5">
+    <div class="welcome-card text-center shadow-sm">
+        <h1 class="fw-bold mb-3">Welcome to Friends Hub</h1>
+
+        <p class="lead text-muted mb-4">
+            A special place to celebrate friendships,
+            cherish memories, and keep your favourite people close.
+        </p>
+
+        <a asp-controller="Friends"
+           asp-action="Index"
+           class="btn dashboard-btn px-4 py-3">
+            <i class="bi bi-grid-fill me-2"></i>
+            Go to Friends Dashboard
+            <i class="bi bi-arrow-right ms-2"></i>
+        </a>
+
+        <p class="text-muted small mt-4 mb-0">
+            <i class="bi bi-heart-fill text-danger me-1"></i>
+            Every friendship has a story worth remembering.
+        </p>
+
+    </div>
+</div>
+
+<style>
+    .welcome-card {
+        max-width: 850px;
+        margin: 30px auto;
+        padding: 60px 30px;
+        border-radius: 24px;
+        background: linear-gradient(180deg, #ffffff, #f8f7ff);
+        border: 1px solid #eee9ff;
+    }
+
+    .welcome-icon {
+        width: 90px;
+        height: 90px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 42px;
+        color: white;
+        background: linear-gradient(135deg, #6a5af9, #a855f7);
+    }
+
+    .welcome-card h1 {
+        color: #33246f;
+    }
+
+    .welcome-card .lead {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.8;
+    }
+
+    .quote-box {
+        max-width: 600px;
+        padding: 22px;
+        border-left: 4px solid #8b5cf6;
+        border-radius: 12px;
+        background: #f0edff;
+    }
+
+    .quote-icon {
+        color: #7957e8;
+        font-size: 28px;
+    }
+
+    .quote-box p {
+        color: #4b3b83;
+        font-size: 17px;
+        line-height: 1.7;
+    }
+
+    .quote-box span {
+        color: #777;
+        font-size: 13px;
+    }
+
+    .dashboard-btn {
+        color: white;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #6a5af9, #a855f7);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+        .dashboard-btn:hover {
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(106, 90, 249, 0.25);
+        }
+
+    @@media (max-width: 576px) {
+        .welcome-card {
+            padding: 40px 20px;
+        }
+
+            .welcome-card h1 {
+                font-size: 30px;
+            }
+    }
+</style>

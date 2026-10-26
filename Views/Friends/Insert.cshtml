@@ -1,0 +1,219 @@
+﻿@model FreindsHub.Models.Friend
+
+<div class="container py-5">
+
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">Add a New Friend</h1>
+        <p class="text-muted">Make your Friends Hub more special 💜</p>
+    </div>
+
+    <div class="card create-card border-0 shadow mx-auto">
+
+        <!-- Header -->
+        <div class="create-header text-center text-white py-4">
+         
+            <h4 class="fw-bold mb-1">Friend Information</h4>
+            <p class="mb-0">Enter your friend's details below</p>
+        </div>
+
+        <!-- Form -->
+        <div class="card-body p-4 p-md-5">
+
+            <form asp-action="Insert" method="post">
+
+                <div asp-validation-summary="ModelOnly"
+                     class="text-danger mb-3"></div>
+
+                <h5 class="section-title mb-3">
+                    <i class="bi bi-person-lines-fill me-2"></i>
+                    Personal Details
+                </h5>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label asp-for="FullName" class="form-label">
+                            Full Name
+                        </label>
+                        <input asp-for="FullName"
+                               class="form-control"
+                               placeholder="Enter full name" />
+                        <span asp-validation-for="FullName"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="NickName" class="form-label">
+                            Nickname
+                        </label>
+                        <input asp-for="NickName"
+                               class="form-control"
+                               placeholder="Enter nickname" />
+                        <span asp-validation-for="NickName"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="PhoneNumber" class="form-label">
+                            Phone Number
+                        </label>
+                        <input asp-for="PhoneNumber"
+                               class="form-control"
+                               placeholder="Enter phone number" />
+                        <span asp-validation-for="PhoneNumber"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="City" class="form-label">
+                            City
+                        </label>
+                        <input asp-for="City"
+                               class="form-control"
+                               placeholder="Enter city" />
+                        <span asp-validation-for="City"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="DateOfBirth" class="form-label">
+                            Date of Birth
+                        </label>
+                        <input asp-for="DateOfBirth"
+                               type="date"
+                               class="form-control" />
+                        <span asp-validation-for="DateOfBirth"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="FriendType" class="form-label">
+                            Friend Type
+                        </label>
+                        <input asp-for="FriendType"
+                               class="form-control"
+                               placeholder="e.g. Best Friend, School Friend" />
+                        <span asp-validation-for="FriendType"
+                              class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <hr class="my-4" />
+
+                <h5 class="section-title mb-3">
+                    <i class="bi bi-stars me-2"></i>
+                    Favourite Things
+                </h5>
+
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label asp-for="FavouriteFood" class="form-label">
+                            Favourite Food
+                        </label>
+                        <input asp-for="FavouriteFood"
+                               class="form-control"
+                               placeholder="e.g. Biryani, Pizza" />
+                        <span asp-validation-for="FavouriteFood"
+                              class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="FavouriteMovie" class="form-label">
+                            Favourite Movie
+                        </label>
+                        <input asp-for="FavouriteMovie"
+                               class="form-control"
+                               placeholder="Enter favourite movie" />
+                        <span asp-validation-for="FavouriteMovie"
+                              class="text-danger"></span>
+                    </div>
+
+                </div>
+
+                <!-- Buttons -->
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-5">
+
+                    <a asp-action="Index"
+                       class="btn btn-outline-secondary px-4">
+                        <i class="bi bi-arrow-left me-1"></i>
+                        Cancel
+                    </a>
+
+                    <button type="submit" class="btn btn-save px-4">
+                        <i class="bi bi-person-check-fill me-1"></i>
+                        Save Friend
+                    </button>
+
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    .create-card {
+        max-width: 850px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .create-header {
+        background: linear-gradient(135deg, #6a5af9, #a855f7);
+    }
+
+    .create-icon {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 38px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .section-title {
+        font-weight: 700;
+        color: #5e45ce;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: #444;
+    }
+
+    .form-control {
+        border-radius: 10px;
+        padding: 11px 14px;
+        border: 1px solid #ddd;
+    }
+
+        .form-control:focus {
+            border-color: #8b5cf6;
+            box-shadow: 0 0 0 0.2rem rgba(139, 92, 246, 0.15);
+        }
+
+    .btn-save {
+        background: linear-gradient(135deg, #6a5af9, #a855f7);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        transition: transform 0.2s ease;
+    }
+
+        .btn-save:hover {
+            color: white;
+            transform: translateY(-2px);
+            background: linear-gradient(135deg, #5848e8, #9333ea);
+        }
+</style>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

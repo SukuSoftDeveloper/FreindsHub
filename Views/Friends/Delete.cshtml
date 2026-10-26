@@ -1,0 +1,189 @@
+﻿@model FreindsHub.Models.Friend
+
+<div class="container py-5">
+
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">Delete Friend</h1>
+        <p class="text-muted">Manage your Friends Hub</p>
+    </div>
+
+    <div class="card delete-card border-0 shadow mx-auto">
+
+        <!-- Header -->
+        <div class="delete-header text-center text-white py-4">
+            <div class="delete-icon mx-auto mb-3">
+                <i class="bi bi-person-x-fill"></i>
+            </div>
+
+            <h4 class="fw-bold mb-1">Are you sure?</h4>
+            <p class="mb-0">
+                Do you really want to delete this friend?
+            </p>
+        </div>
+
+        <!-- Friend Details -->
+        <div class="card-body p-4 p-md-5">
+
+            <div class="text-center mb-4">
+                <h3 class="fw-bold">@Model.FullName</h3>
+                <span class="badge rounded-pill bg-light text-dark border px-3 py-2">
+                    @Model.FriendType
+                </span>
+            </div>
+
+            <div class="friend-info">
+
+                <div class="info-row">
+                    <i class="bi bi-person-heart"></i>
+                    <div>
+                        <small>Nickname</small>
+                        <p>@Model.NickName</p>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <i class="bi bi-telephone-fill"></i>
+                    <div>
+                        <small>Phone Number</small>
+                        <p>@Model.PhoneNumber</p>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <div>
+                        <small>City</small>
+                        <p>@Model.City</p>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <i class="bi bi-cake2-fill"></i>
+                    <div>
+                        <small>Date of Birth</small>
+                        <p>@Model.DateOfBirth</p>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <i class="bi bi-egg-fried"></i>
+                    <div>
+                        <small>Favourite Food</small>
+                        <p>@Model.FavouriteFood</p>
+                    </div>
+                </div>
+
+                <div class="info-row">
+                    <i class="bi bi-film"></i>
+                    <div>
+                        <small>Favourite Movie</small>
+                        <p>@Model.FavouriteMovie</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="alert alert-warning mt-4 text-center">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                This action cannot be undone.
+            </div>
+
+            <!-- Confirmation Buttons -->
+            <form asp-action="DeleteConfirmed" method="post">
+                <input type="hidden" asp-for="Id" />
+
+                <div class="d-flex flex-wrap justify-content-center gap-3 mt-4">
+
+                    <a asp-action="Index"
+                       class="btn btn-outline-secondary px-4">
+                        <i class="bi bi-arrow-left me-1"></i>
+                        Cancel
+                    </a>
+
+                    <button type="submit" class="btn btn-delete px-4">
+                        <i class="bi bi-trash-fill me-1"></i>
+                        Delete Friend
+                    </button>
+
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .delete-card {
+        max-width: 750px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .delete-header {
+        background: linear-gradient(135deg, #6a5af9, #a855f7);
+    }
+
+    .delete-icon {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 38px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 2px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .friend-info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .info-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px;
+        background: #f8f9fc;
+        border-radius: 12px;
+        min-width: 0;
+    }
+
+        .info-row > i {
+            color: #7957e8;
+            font-size: 20px;
+        }
+
+        .info-row small {
+            display: block;
+            color: #888;
+            margin-bottom: 4px;
+        }
+
+        .info-row p {
+            margin: 0;
+            font-weight: 600;
+            overflow-wrap: anywhere;
+        }
+
+    .btn-delete {
+        background: #dc3545;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        transition: background 0.2s ease;
+    }
+
+        .btn-delete:hover {
+            background: #bb2d3b;
+            color: white;
+        }
+
+    @@media (max-width: 576px) {
+        .friend-info {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
