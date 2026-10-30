@@ -228,3 +228,4 @@ C:\Users\sudhe\source\repos\FreindsHub\FreindsHub\obj\Debug\net9.0\ref\FreindsHu
 C:\Users\sudhe\source\repos\FreindsHub\FreindsHub\obj\Debug\net9.0\compressed\8hja2ar750-s7kl40k1vd.gz
 C:\Users\sudhe\source\repos\FreindsHub\FreindsHub\obj\Debug\net9.0\compressed\quyrvrohtv-6bw9hieaa2.gz
 C:\Users\sudhe\source\repos\FreindsHub\FreindsHub\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\sudhe\source\repos\FreindsHub\FreindsHub\obj\Debug\net9.0\FreindsHub.sourcelink.json

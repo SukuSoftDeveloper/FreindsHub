@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FreindsHub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48e28aeefd0c8ddaf727f04499303ddafb9c72d8")]
 [assembly: System.Reflection.AssemblyProductAttribute("FreindsHub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FreindsHub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

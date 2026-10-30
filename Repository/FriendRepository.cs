@@ -17,7 +17,7 @@ namespace FreindsHub.Repository
         {
           return  _db.Friends.ToList();
         }
-
+  
         public Friend GetFriendById(int id)
         {
             return _db.Friends.Find(id);
